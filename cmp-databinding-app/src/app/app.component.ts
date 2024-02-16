@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
 
-interface ServerElements {
-  type: string;
-  name: string;
-  content: string;
-}
 
 @Component({
   selector: 'app-root',
@@ -12,23 +7,6 @@ interface ServerElements {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements: ServerElements[] = [];
-  newServerName = '';
-  newServerContent = '';
-
-  onAddServer() {
-    this.serverElements.push({
-      type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
-    })
-  }
-
-  onAddBlueprint() {
-     this.serverElements.push({
-      type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
-     })
-  }
+  serverElements = [{type: 'server', name: 'test server', content: 'test content'}];
+  
 }
