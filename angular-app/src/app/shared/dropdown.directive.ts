@@ -9,7 +9,7 @@ export class DropdownDirective implements OnInit {
     this.isOpen = !this.isOpen;
   }
   
-    constructor() {}
+  constructor() {}
 
   ngOnInit(): void {
     
