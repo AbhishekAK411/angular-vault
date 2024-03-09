@@ -14,6 +14,24 @@ export class AppComponent {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+
+    //* Set value to override the entire form, and patch value to override certain parts of the form.
+    //this.signupForm.setValue({
+    //  userData: {
+    //    username: suggestedName,
+    //    email: '',
+    //  },
+    //  secret: 'pet',
+    //  questionAnswer: '',
+    //  gender: 'male'
+    //});
+
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
+
   }
 
   onSubmit() {
