@@ -29,7 +29,7 @@
         <p>Your reply: {{ answer }} </p>
         <div class="radio" *ngFor="let gender of genders">
           <label>
-            <input type="radio" ngModel name="gender" [value]="gender" />
+            <input type="radio" ngModel name="gender" [value]="gender" required />
             {{ gender }}
           </label>
         </div>
