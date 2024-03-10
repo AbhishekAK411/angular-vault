@@ -11,18 +11,30 @@
            Display a warning message if the Form is invalid AND was touched. Display a warning message below each input if it's invalid.
 
            Upon submitting the form, you should simply print the Value of the Form to the Console.
-           Optionally, display it in your template.
+            Optionally, display it in your template.
       -->
-      <form>
+      <form (ngSubmit)="onSubmit()">
         <div id="user-data">
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" placeholder="Enter your email address." />
+            <input class="form-control" type="email" placeholder="Enter your email address." />
           </div>
           <div class="form-group">
             <label for="subscription">Select subscription</label>
-
+            <li class="dropdown" appDropdown>
+              <a href="#" class="dropdown-toggle" role="button">Subscription <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Basic</a></li>
+                <li><a href="#">Advanced</a></li>
+                <li><a href="#">Pro</a></li>
+              </ul>
+            </li>
           </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" placeholder="Enter your password." />
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
         </div>
       </form>
     </div>
